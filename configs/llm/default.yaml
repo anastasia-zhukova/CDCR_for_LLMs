@@ -1,0 +1,20 @@
+# @package llm
+# Default endpoint. `model` and `api_url` are null and fall back to LLM_MODEL_NAME
+# and LLM_API_URL from constants (see .env.example). To target a different model or
+# endpoint, copy this file to configs/llm/<model>.yaml, fill in the fields below, and
+# select it with `llm@approach.llm=<model>`.
+model: null
+api_url: null
+api_key_env: LLM_API_TOKEN  # env var that holds this endpoint's API key
+# Max in-flight async requests. Keep below the endpoint's concurrency limit.
+# Override per run with `llm.max_concurrency=<n>`.
+max_concurrency: 50
+max_retries: 5      # transient-failure retries (SDK exponential backoff)
+timeout: 60         # per-request timeout in seconds
+params:
+  temperature: 0.0
+  top_p: 1.0
+  # Reasoning models (e.g. Qwen3 served via vLLM/SGLang) — disable thinking per model:
+  # extra_body:
+  #   chat_template_kwargs:
+  #     enable_thinking: false

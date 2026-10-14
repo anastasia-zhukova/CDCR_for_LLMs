@@ -1,0 +1,4 @@
+# @package data
+dataset: CEREC
+eval_split: TEST
+kind: ENTITY

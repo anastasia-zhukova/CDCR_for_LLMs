@@ -1,0 +1,4 @@
+# @package data
+dataset: WECEng
+eval_split: TEST
+kind: EVENT

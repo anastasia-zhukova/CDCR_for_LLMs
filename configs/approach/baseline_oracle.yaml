@@ -1,0 +1,7 @@
+# @package approach
+# Oracle baseline: each candidate pair is labeled with its gold answer (no LLM call).
+# Link precision is perfect, so any gap from CoNLL=1.0 is purely the candidate
+# generator's recall ceiling — the upper bound the LLM could reach on this set.
+# Its own MLflow experiment (experiment_name = ${approach.name}); carries no llm config.
+name: baseline_oracle
+strategy: ORACLE

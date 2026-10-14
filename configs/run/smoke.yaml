@@ -1,0 +1,8 @@
+# @package run
+max_predictions: 10
+progress_log_every: 5
+persist_predictions: true
+transitive_grouping: true            # infer A~C from A~B and B~C, skipping its LLM request
+resume: false                        # smoke runs always start fresh
+checkpoint_dir: outputs/checkpoints  # directory holding warm-start checkpoints
+max_consecutive_failures: 5

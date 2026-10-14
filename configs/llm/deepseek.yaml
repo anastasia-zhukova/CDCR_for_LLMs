@@ -1,0 +1,16 @@
+# @package llm
+# DeepSeek-V4 via the OpenAI-compatible endpoint. The LLM approaches compose it by default.
+# Set the API key in .env under the var named below (api_key_env), e.g. DEEPSEEK_API_KEY.
+model: deepseek-v4-flash
+api_url: https://api.deepseek.com
+api_key_env: DEEPSEEK_API_KEY
+# DeepSeek rejects the native json_schema response_format, so use prompted JSON mode.
+output_mode: json_object
+# DeepSeek-V4-Flash concurrency limit is 2500 (pro: 500). Stay under it; this is the
+# default and is meant to be tuned per run with `llm.max_concurrency=<n>`.
+max_concurrency: 1000
+max_retries: 5      # transient-failure retries (SDK exponential backoff)
+timeout: 60         # per-request timeout in seconds
+params:
+  temperature: 0.0
+  top_p: 1.0

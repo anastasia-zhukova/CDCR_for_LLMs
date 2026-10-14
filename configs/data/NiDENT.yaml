@@ -1,0 +1,4 @@
+# @package data
+dataset: NiDENT
+eval_split: TEST
+kind: ENTITY

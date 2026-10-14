@@ -1,0 +1,5 @@
+# @package candidates
+strategy: ALL_PAIRS  # ALL_PAIRS (everyone-vs-everyone) | HEAD_LEMMA (shared head lemma)
+max_candidates: null
+max_candidates_per_mention: null
+seed: 42

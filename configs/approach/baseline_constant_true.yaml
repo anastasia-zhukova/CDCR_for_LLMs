@@ -1,0 +1,7 @@
+# @package approach
+# Sanity baseline: every candidate pair is predicted coreferent (no LLM call).
+# Predicted clusters = connected components of the candidate graph; the recall
+# ceiling of the candidate set, with no link precision.
+# Its own MLflow experiment (experiment_name = ${approach.name}); carries no llm config.
+name: baseline_constant_true
+strategy: CONSTANT_TRUE

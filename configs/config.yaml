@@ -1,0 +1,9 @@
+defaults:
+  - base_experiment_config
+  - data: ECBplus_both
+  - candidates: full
+  - approach: random_few_shot  # pulls in its own `llm` config; baselines pull in none
+  - run: default
+  - _self_
+
+extra_params: {}

@@ -1,0 +1,4 @@
+# @package data
+dataset: NewsWCL50
+eval_split: TEST
+kind: BOTH

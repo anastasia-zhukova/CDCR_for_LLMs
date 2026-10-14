@@ -1,0 +1,11 @@
+# @package approach
+# End-to-end approach: the LLM is handed every mention in a subtopic at once and returns the
+# coreference chains directly, folding candidate generation and decision-making into one call.
+# Like random_few_shot it owns its endpoint by composing `llm: deepseek`. It uses no candidates
+# and no few-shot examples, so the candidates config is ignored on this path.
+defaults:
+  - /llm: deepseek
+
+name: e2e
+e2e:
+  tokenizer_encoding: o200k_base  # tiktoken encoding for the (informational) prompt-size estimate

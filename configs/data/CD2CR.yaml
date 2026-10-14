@@ -1,0 +1,4 @@
+# @package data
+dataset: CD2CR
+eval_split: TEST
+kind: ENTITY

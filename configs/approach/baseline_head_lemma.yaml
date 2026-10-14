@@ -1,0 +1,7 @@
+# @package approach
+# Lexical baseline: a pair is coreferent iff its mentions share a normalized head
+# lemma (no LLM call). Run on the ALL_PAIRS candidate set (candidates=full); the
+# predicted clusters are then the per-(subtopic, head lemma) groups.
+# Its own MLflow experiment (experiment_name = ${approach.name}); carries no llm config.
+name: baseline_head_lemma
+strategy: HEAD_LEMMA

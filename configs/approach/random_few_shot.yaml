@@ -1,0 +1,14 @@
+# @package approach
+# The LLM approach owns its endpoint: selecting it composes `llm: deepseek` into the
+# config. Baselines select no llm config, so their config has no model fields at all.
+defaults:
+  - /llm: deepseek
+
+name: random_few_shot
+few_shot:
+  num_examples: 4
+  strategy: ALL_DATASETS  # SAME_DATASET | ALL_DATASETS (pool across every dataset's train split)
+  train_dataset: null     # null -> same dataset as data.dataset; ignored when strategy=ALL_DATASETS
+  train_kind: null        # null -> same kind as data.kind
+  pool_mentions: 512      # cap train mentions sampled per (dataset, kind) before pairing; null -> all
+  seed: 42                # fixed seed -> the sampled mentions (and example pool) stay constant

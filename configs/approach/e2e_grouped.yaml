@@ -1,0 +1,11 @@
+# @package approach
+# End-to-end approach, token-efficient variant: each document of a subtopic is rendered once with
+# its mentions tagged inline by id, instead of repeating an overlapping context window per mention.
+# Like e2e it owns its endpoint by composing `llm: deepseek`, uses no candidates and no few-shot
+# examples, and is driven through the runner's subtopic path.
+defaults:
+  - /llm: deepseek
+
+name: e2e_grouped
+e2e_grouped:
+  tokenizer_encoding: o200k_base  # tiktoken encoding for the (informational) prompt-size estimate
