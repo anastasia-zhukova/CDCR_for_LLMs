@@ -1,4 +1,4 @@
-# llm_ucdcr
+# Cross-Document Coreference Resolution (CDCR) with LLMs
 
 The project measures how well an LLM solves cross-document coreference resolution (CDCR) out of the box, without fine-tuning, on the twelve datasets of the [uCDCR](https://github.com/anastasia-zhukova/uCDCR) collection. Predictions are scored per subtopic with the CoNLL scorer (MUC, B³, CEAFe and their CoNLL F1 average).
 
